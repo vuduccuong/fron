@@ -17,7 +17,7 @@ const PostData = ()=>{
         password:password,
         email:email,
       };
-    axios.post('/signup',data,headers)
+    axios.post('https://intagram-apiv1.herokuapp.com/signup',data,headers)
     .then(response=>{
         console.log(response);
         if(response.status === 200){
