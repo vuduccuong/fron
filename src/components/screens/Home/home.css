@@ -1,0 +1,133 @@
+.main-app{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-article{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 32px auto 0;
+    max-width: 935px;
+    padding-bottom: 32px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 0;
+    position: relative;
+}
+
+.main-article__right{
+    height: 618px;
+    background-image: url("./43cc71bb1b43.png");
+    background-repeat: no-repeat;
+    background-size: 454px 618px;
+    flex-basis: 454px;
+}
+
+.main-article__left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    border: 0 solid #000;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    margin-top: 12px;
+    position: relative;
+    max-width: 350px;
+}
+
+.main-left-login{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.form-login{
+    margin-bottom: 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.form-login__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login__user{
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    font-size: 14px;
+    margin: 0 40px 6px;
+}
+
+.form-login__button{
+    margin: 8px 40px;
+}
+
+.form-login__button button{
+    width: 100%;
+}
+
+.form-login__other{
+    margin: 10px 40px 18px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.other-line{
+    position: relative;
+    top: 45px;
+    height: 2px;
+    background-color: #dbdbdb;
+}
+
+.form-login__social{
+    display: flex;
+    justify-content:center;
+}
+
+.fogot-pass{
+    margin-top: 18px;
+    text-align: center;
+}
+
+.form-register{
+    border: 1px solid #dbdbdb;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-register__info{
+    display: flex;
+    justify-self: start;
+    align-items: center;
+}
+
+.form-dowload{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.form-dowload__text{
+    text-align: center;
+}
+
+.form-dowload__photo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-dowload__photo img{
+    height: 40px;
+    width: 134px;
+}
