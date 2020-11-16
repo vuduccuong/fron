@@ -23,7 +23,7 @@ const Home = ()=>{
             email:email,
             password:password
           };
-        axios.post('https://intagram-apiv1.herokuapp.com//signin',data,headers)
+        axios.post('https://intagram-apiv1.herokuapp.com/signin',data,headers)
         .then(response=>{
             if(response && response.status === 200){
                 localStorage.setItem(TOKEN_KEY, response.data.token);
