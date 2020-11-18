@@ -45,7 +45,6 @@ const Home = ()=>{
             setHadLogin(true);
             history.push('/');
         }
-        history.push('/login');
     },[hadLogin,history]);
 
     return(
