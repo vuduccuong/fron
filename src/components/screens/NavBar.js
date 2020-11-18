@@ -13,10 +13,10 @@ const Nav = ()=>{
       <ul id="nav-mobile" className="right ">
         <li><Link to="/logout">Logout</Link></li>
         <li><Link to="/signup">Signup</Link></li>
-        <li><a onClick={()=>{
+        <li><div onClick={()=>{
             localStorage.setItem(USER_KEY,null)
             history.push('/');
-        }>Profile</a></li>
+        }}>Logout</div></li>
       </ul>
     </div>
   </nav>
