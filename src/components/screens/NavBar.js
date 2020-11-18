@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 
 //key
-import {USER_KEY} from '../client/utils/localkeys';
+import {USER_KEY} from '../../client/utils/localkeys';
 
 const Nav = ()=>{
   const history = useHistory();
