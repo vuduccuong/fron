@@ -6,25 +6,28 @@ import Signup from './components/screens/Signup';
 import Profile from './components/screens/Profile';
 import Footer from './components/screens/Footer/Footer';
 import './App.css';
-
+import AppProvider from './components/context/AppProvider';
 function App() {
   return (
-    <BrowserRouter>
-      
-      <Route exact path="/">
-          <Home />
-      </Route>
-      <Route path="/login">
-          <Login />
-      </Route>
-      <Route exact path="/signup">
-          <Signup />
-      </Route>
-      <Route exact path="/profile">
-          <Profile />
-      </Route>
-      <Footer/>
-    </BrowserRouter>
+    
+      <BrowserRouter>
+        <AppProvider>
+        <Route exact path="/">
+            <Home />
+        </Route>
+        <Route path="/login">
+            <Login />
+        </Route>
+        <Route exact path="/signup">
+            <Signup />
+        </Route>
+        <Route exact path="/profile">
+            <Profile />
+        </Route>
+        <Footer/>
+        </AppProvider>
+      </BrowserRouter>
+    
   );
 }
 

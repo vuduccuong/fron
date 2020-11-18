@@ -1,8 +1,9 @@
-import React,{useState, useEffect, Fragment} from 'react';
+import React,{useState, useEffect, Fragment,useContext} from 'react';
 import {useHistory, Link} from 'react-router-dom';
-
+import {AppContext} from '../../context/AppProvider';
 import Nav from '../NavBar';
 import Posts from '../Posts/Posts';
+
 
 import axios from 'axios';
 
@@ -12,6 +13,8 @@ import {TOKEN_KEY, USER_KEY} from '../../../client/utils/localkeys';
 import './home.css';
 
 const Home = ()=>{
+
+    const {isLg,setLogin} = useContext(AppContext)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const history = useHistory();
@@ -36,19 +39,26 @@ const Home = ()=>{
                 setHadLogin(true);
             }else{
                 alert("thất bại");
-            }
+            };
+            setLogin();
         })
         .catch(err => console.log(err));
     };
 
+    const GetData = ()=>{
+        const strUser = localStorage.getItem(USER_KEY);
+            if(strUser){
+                setHadLogin(true);
+                setLogin();
+                history.push('/');
+            };
+        }
+
     useEffect(()=>{
         console.log('re render');
-        const strUser = localStorage.getItem(USER_KEY);
-        if(strUser){
-            setHadLogin(true);
-            history.push('/');
-        }
-    },[history]);
+
+        GetData()
+    },[]);
 
     return(
        !hadLogin ? 
@@ -130,7 +140,7 @@ const Home = ()=>{
         : 
         <Fragment>
             <Nav />
-            <h2>Producs</h2>
+            {isLg ? <h2>Producs</h2> : <h2>Pẹt</h2>}
             <Posts/>
         </Fragment>
         
