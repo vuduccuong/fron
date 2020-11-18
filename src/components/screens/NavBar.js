@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 
 //key
-import {USER_KEY} from '../../client/utils/localkeys';
+import {USER_KEY} from '../client/utils/localkeys';
 
 const Nav = ()=>{
   const history = useHistory();
@@ -14,7 +14,7 @@ const Nav = ()=>{
         <li><Link to="/logout">Logout</Link></li>
         <li><Link to="/signup">Signup</Link></li>
         <li><div onClick={()=>{
-            localStorage.setItem(USER_KEY,null)
+            localStorage.setItem(USER_KEY,"");
             history.push('/');
         }}>Logout</div></li>
       </ul>
