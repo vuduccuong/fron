@@ -2,7 +2,10 @@ import React,{useState, useEffect, Fragment} from 'react';
 import {useHistory, Link} from 'react-router-dom';
 
 import Nav from '../NavBar';
+import Posts from '../Posts/Posts';
+
 import axios from 'axios';
+
 
 //key
 import {TOKEN_KEY, USER_KEY} from '../../../client/utils/localkeys';
@@ -45,7 +48,7 @@ const Home = ()=>{
             setHadLogin(true);
             history.push('/');
         }
-    },[hadLogin,history]);
+    },[history]);
 
     return(
        !hadLogin ? 
@@ -127,7 +130,8 @@ const Home = ()=>{
         : 
         <Fragment>
             <Nav />
-            <h2>Home Page</h2>
+            <h2>Producs</h2>
+            <Posts/>
         </Fragment>
         
     );
