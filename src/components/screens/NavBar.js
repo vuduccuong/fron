@@ -11,9 +11,9 @@ const Nav = ()=>{
     <div className="nav-wrapper white">
       <Link to="/" className="brand-logo left">Intagram</Link>
       <ul id="nav-mobile" className="right ">
-        <li><Link to="/logout">Logout</Link></li>
+        <li><Link to="/profile">Profile</Link></li>
         <li><Link to="/signup">Signup</Link></li>
-        <li><div onClick={()=>{
+        <li><div style={{color:"black"}} onClick={()=>{
             localStorage.setItem(USER_KEY,"");
             history.push('/');
         }}>Logout</div></li>
